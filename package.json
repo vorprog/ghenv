@@ -1,0 +1,15 @@
+{
+  "name": "ghenv",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build --minify --compile ./src/index.ts --outfile ghenv && mv ghenv ./dist/ghenv",
+    "test": "echo 'hello world' | ./dist/ghenv TEST_VARIABLE_NAME"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
